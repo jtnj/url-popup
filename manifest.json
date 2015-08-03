@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "URL popup",
+  "description": "Display <a> tags' URLs on hover - useful for Yandex.Browser which doesn't have URL preview in status bar",
+  "version": "1.0",
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts":
+  [
+    {
+      "js": ["URL_popup.js"],
+      "matches": ["<all_urls>"],
+      "include_globs": [],
+      "exclude_globs": [],
+      "run_at": "document_end",
+      "all_frames" : true
+    }
+  ],
+  "icons" : 
+    {
+        "128": "icons/icon_128.png", 
+        "32": "icons/icon_032.png", 
+        "16": "icons/icon_016.png"
+    }
+}
